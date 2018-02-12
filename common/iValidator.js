@@ -1,4 +1,3 @@
-
 var errorCode = require('./error-code')
 var errorMessage = require('./error-methods')
 var Ajv = require('ajv');
@@ -7,7 +6,7 @@ var schemaValidator = Ajv({
 });
 
 module.exports = {
-  json_schema: function (schema, data, model) {
+  json_schema: function(schema, data, model) {
 
     var testSchemaValidator = schemaValidator.compile(schema);
     var valid = testSchemaValidator(data);
